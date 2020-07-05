@@ -288,7 +288,7 @@ function generateContractFile(
     const inputs = item.inputs
       .concat([`$$overrides?: ${item.overrides}`])
       .join(', ');
-  
+
     const callDeclaration = contractClass.addProperty({
       name: item.fragment.name,
       type: `(${inputs}) => Promise<${item.output}>`,
